@@ -980,7 +980,7 @@ ul.dropdown-menu li {
 }
 
 .feature {
-  background: url("../img/feature-bg-2.png");
+  background: url("../img/feature-bg-2.jpg");
   background-position: 25% 94px;
   display: block;
   position: relative;
@@ -2084,7 +2084,7 @@ ul.dropdown-menu li {
 }
 
 .bg-2 {
-  background: url("../images/feature-bg-2.png");
+  background: url("../images/feature-bg-2.jpg");
   background-position: 80px;
   background-size: 40%;
   background-repeat: no-repeat;
@@ -2093,13 +2093,13 @@ ul.dropdown-menu li {
 
 @media (max-width: 1024px) {
   .bg-2 {
-  background: url("../images/feature-bg.jpg");
+  background: url("../images/feature-bg-2.jpg");
   background-attachment: fixed;
   }
 }
 @media (max-width: 768px) {
   .bg-2 {
-  background: url("../images/feature-bg.jpg");
+  background: url("../images/feature-bg-2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   }
@@ -2107,7 +2107,7 @@ ul.dropdown-menu li {
 
 @media (max-width: 480px) {
   .bg-2 {
-  background: url("../images/feature-bg.jpg");
+  background: url("../images/feature-bg-2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   }
