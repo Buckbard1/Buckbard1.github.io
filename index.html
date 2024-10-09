@@ -40,29 +40,6 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-<script>
-
-function getDateWeek(date) {
-    const currentDate = 
-        (typeof date === 'object') ? date : new Date();
-    const januaryFirst = 
-        new Date(currentDate.getFullYear(), 0, 1);
-    const daysToNextMonday = 
-        (januaryFirst.getDay() === 1) ? 0 : 
-        (7 - januaryFirst.getDay()) % 7;
-    const nextMonday = 
-        new Date(currentDate.getFullYear(), 0, 
-        januaryFirst.getDate() + daysToNextMonday);
-
-    return (currentDate < nextMonday) ? 52 : 
-    (currentDate > nextMonday ? Math.ceil(
-    (currentDate - nextMonday) / (24 * 3600 * 1000) / 7) : 1);
-}
-
-const currentDate = new Date();
-const weekNumber = getDateWeek();
-
-</script>
 
 	
 </head>
@@ -144,7 +121,7 @@ const weekNumber = getDateWeek();
 <section class="call-to-action bg-2 section-sm overly">
   <div class="container">
       <div class="col-md-12">
-        <h2 class="section-subtitle">WE DON'T BELIEVE IN FATE</h2>
+        <h2 class="mb-3">WE DON'T BELIEVE IN FATE</h2>
         <p>How many times have you heard that the future is already written, we're just playing it out? Or that there is a divine 
         plan that we have to just accept? Nonsense. We agree with James Cameron when he said, <em>"The future is not set. 
         There is no fate but what we make."</em><p>
