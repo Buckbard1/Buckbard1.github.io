@@ -40,6 +40,31 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+<script>
+
+function getDateWeek(date) {
+    const currentDate = 
+        (typeof date === 'object') ? date : new Date();
+    const januaryFirst = 
+        new Date(currentDate.getFullYear(), 0, 1);
+    const daysToNextMonday = 
+        (januaryFirst.getDay() === 1) ? 0 : 
+        (7 - januaryFirst.getDay()) % 7;
+    const nextMonday = 
+        new Date(currentDate.getFullYear(), 0, 
+        januaryFirst.getDate() + daysToNextMonday);
+
+    return (currentDate < nextMonday) ? 52 : 
+    (currentDate > nextMonday ? Math.ceil(
+    (currentDate - nextMonday) / (24 * 3600 * 1000) / 7) : 1);
+}
+
+const currentDate = new Date();
+const weekNumber = getDateWeek();
+
+</script>
+
+	
 </head>
 
 <body id="body">
@@ -224,7 +249,7 @@
             <div class="col-3" align="center">
               <div class="counter-item">
                <i class="icon"><ion-icon name="create-outline"></ion-icon></i>
-                <h4 class="count" data-count="21">0</h4>
+                <h4 class="count" data-count=weekNumber>0</h4>
                 <span>Articles Written</span>
               </div>
             </div>
