@@ -2085,8 +2085,7 @@ ul.dropdown-menu li {
 
 .bg-2 {
   background: url("../images/feature-bg-2.jpg");
-  background-position: 80px;
-  background-size: 40%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
